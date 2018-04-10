@@ -1,0 +1,19 @@
+<div class="container">
+  <p>Forms</p>
+  <div class="col">
+    <div class="row-xs-12">
+      <label>Two-way binding</label>
+      <input type="text" class="form-control" [(ngModel)]="username" (input)="onUsername($event)" placeholder="Enter username">
+      <h4>username: {{username}}</h4>
+      <button class="btn btn-primary" [disabled]="resetDisabled" (click)="resetUsername()">Reset</button>
+    </div>
+  </div>
+  <div class="col" style="padding-top: 50px">
+    <div class="row-xs-12">
+      <label>Two-way binding: Solution</label>
+      <input type="text" class="form-control" [(ngModel)]="username2" placeholder="Enter username">
+      <h4>username: {{username2}}</h4>
+      <button class="btn btn-primary" [disabled]="username2 === ''" (click)="username2 = ''">Reset</button>
+    </div>
+  </div>
+</div>
